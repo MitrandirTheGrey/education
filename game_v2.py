@@ -7,9 +7,9 @@ def random_predict(number:int=1) -> int:
         number (int, optional): Загаданное число. Defaults to 1.
 
     Returns:
-        int: Число попыток
+         int: Число попыток
     """
-
+    
     count = 0
 
     while True:
@@ -18,8 +18,6 @@ def random_predict(number:int=1) -> int:
         if number == predict_number:
             break # выход из цикла, если угадали
     return(count)
-
-print(f'Количество попыток: {random_predict()}')
 
 def score_game(random_predict) -> int:
     """За какое количество попыток в среднем из 1000 подходов угадывает наш алгоритм
@@ -44,5 +42,4 @@ def score_game(random_predict) -> int:
     return(score)
 
 # RUN
-if __name__ == '__main__':
-    score_game(random_predict)
+score_game(random_predict)
